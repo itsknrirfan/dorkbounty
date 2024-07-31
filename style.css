@@ -48,3 +48,13 @@ a:hover {
     color: #ffffff;
     font-weight: bold;
 }
+
+
+/* Make the search input sticky */
+#domainInput {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
