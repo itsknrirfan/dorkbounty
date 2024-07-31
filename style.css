@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+li {
+    margin-bottom: 10px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #69f0ae;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ p {
+     margin: 0;
+ }
+
+ p.description {
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+
+.footer {
+    background-color: #505962;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer-link {
+    color: #ffffff;
+    font-weight: bold;
+}

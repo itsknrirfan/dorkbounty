@@ -1,0 +1,70 @@
+[
+    {
+        "title": "Broad domain search with exclusions",
+        "dork": "site:example.com -www -shop -share -ir -mfa"
+    },
+    {
+        "title": "Filetype and extension checks",
+        "dork": "site:example.com ext:php | ext:asp | ext:aspx | ext:jsp | ext:jspx | ext:html | ext:js | ext:txt | ext:conf | ext:cnf | ext:ini"
+    },
+    {
+        "title": "Sensitive directories and files",
+        "dork": "site:example.com intitle:index.of"
+    },
+    {
+        "title": "Login pages and admin interfaces",
+        "dork": "site:example.com inurl:login | inurl:admin"
+    },
+    {
+        "title": "Error messages and server configurations",
+        "dork": "site:example.com intitle:\"Index of /\" | intitle:\"Apache HTTP Server Test Page powered by CentOS\" | intitle:\"Test Page for the Apache HTTP Server on Fedora\""
+    },
+    {
+        "title": "Exposed sensitive documents",
+        "dork": "site:example.com ext:doc | ext:docx | ext:pdf | ext:xls | ext:xlsx | ext:csv"
+    },
+    {
+        "title": "Open Redirect prone parameters",
+        "dork": "inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:& inurl:http site:example.com"
+    },
+    {
+        "title": "SQLi Prone Parameters",
+        "dork": "inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:& site:example.com"
+    },
+    {
+        "title": "SSRF Prone Parameters",
+        "dork": "inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain=  | inurl:page= inurl:& site:example.com"
+    },
+    {
+        "title": "LFI Prone Parameters",
+        "dork": "inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:example.com"
+    },
+    {
+        "title": "RCE Prone Parameters",
+        "dork": "inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read=  | inurl:ping= inurl:& site:example.com"
+    },
+    {
+        "title": "File upload endpoints",
+        "dork": "site:example.com ”choose file”"
+    },
+    {
+        "title": "API Docs",
+        "dork": "inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:\"example[.]com\""
+    },
+    {
+        "title": "Sensitive API endpoints",
+        "dork": "site:example.com inurl:/api/"
+    },
+    {
+        "title": "Code Leaks",
+        "dork": "site:pastebin.com \"example.com\""
+    },
+    {
+        "title": "Cloud Storage",
+        "dork": "site:s3.amazonaws.com \"example.com\""
+    },
+    {
+        "title": "Firebase",
+        "dork": "site:firebaseio.com \"example[.]com\""
+    }
+]
